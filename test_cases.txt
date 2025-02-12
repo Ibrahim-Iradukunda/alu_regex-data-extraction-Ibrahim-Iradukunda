@@ -1,0 +1,7 @@
+user@example.com
+https://example.com
+(123) 456-7890
+1234 5678 9012 3456
+14:30
+<div>Test</div>
+$19.99
