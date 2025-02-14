@@ -15,64 +15,64 @@ class DataExtractor {
      * Extract email addresses from the text
      */
     extractEmails() {
-        const pattern = /\b[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Z|a-z]{2,}\b/g;
-        return this.sampleText.match(pattern) || [];
+        const emailPattern = /\b[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Z|a-z]{2,}\b/g;
+        return this.sampleText.match(emailPattern) || [];
     }
 
     /**
      * Extract URLs from the text
      */
     extractUrls() {
-        const pattern = /https?:\/\/(?:[-\w.]|(?:%[\da-fA-F]{2}))+[^\s,)"]*/g;
-        return this.sampleText.match(pattern) || [];
+        const urlPattern = /https?:\/\/(?:[-\w.]|(?:%[\da-fA-F]{2}))+[^\s,)"]*/g;
+        return this.sampleText.match(urlPattern) || [];
     }
 
     /**
      * Extract phone numbers from the text
      */
     extractPhoneNumbers() {
-        const pattern = /(?:\+\d{1,2}\s?)?\(?\d{3}\)?[-.\s]?\d{3}[-.\s]?\d{4}/g;
-        return this.sampleText.match(pattern) || [];
+        const phonePattern = /(?:\+\d{1,2}\s?)?\(?\d{3}\)?[-.\s]?\d{3}[-.\s]?\d{4}/g;
+        return this.sampleText.match(phonePattern) || [];
     }
 
     /**
      * Extract credit card numbers from the text
      */
     extractCreditCards() {
-        const pattern = /\b(?:\d{4}[-\s]?){3}\d{4}\b/g;
-        return this.sampleText.match(pattern) || [];
+        const creditCardPattern = /\b(?:\d{4}[-\s]?){3}\d{4}\b/g;
+        return this.sampleText.match(creditCardPattern) || [];
     }
 
     /**
      * Extract time formats from the text
      */
     extractTime() {
-        const pattern = /(?:(?:0?[1-9]|1[0-2]):[0-5]\d\s?(?:AM|PM)|(?:2[0-3]|[01]?\d):[0-5]\d)/g;
-        return this.sampleText.match(pattern) || [];
+        const timePattern = /(?:(?:0?[1-9]|1[0-2]):[0-5]\d\s?(?:AM|PM)|(?:2[0-3]|[01]?\d):[0-5]\d)/g;
+        return this.sampleText.match(timePattern) || [];
     }
 
     /**
      * Extract HTML tags from the text
      */
     extractHtmlTags() {
-        const pattern = /<[^>]+>/g;
-        return this.sampleText.match(pattern) || [];
+        const htmlPattern = /<[^>]+>/g;
+        return this.sampleText.match(htmlPattern) || [];
     }
 
     /**
      * Extract hashtags from the text
      */
     extractHashtags() {
-        const pattern = /#[a-zA-Z0-9_]+\b/g;
-        return this.sampleText.match(pattern) || [];
+        const hashtagPattern = /#[a-zA-Z0-9_]+\b/g;
+        return this.sampleText.match(hashtagPattern) || [];
     }
 
     /**
      * Extract currency amounts from the text
      */
     extractCurrency() {
-        const pattern = /\$\d{1,3}(?:,\d{3})*(?:\.\d{2})?/g;
-        return this.sampleText.match(pattern) || [];
+        const currencyPattern = /\$\d{1,3}(?:,\d{3})*(?:\.\d{2})?/g;
+        return this.sampleText.match(currencyPattern) || [];
     }
 }
 
