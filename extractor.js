@@ -1,5 +1,7 @@
 #!/usr/bin/env node
 
+console.log("Running Data Extractor...");
+
 /**
  * DataExtractor class for extracting structured data patterns from text using regular expressions.
  */
@@ -9,6 +11,7 @@ class DataExtractor {
      */
     constructor(sampleText) {
         this.sampleText = sampleText;
+        console.log("DataExtractor initialized with sample text.");
     }
 
     /**
@@ -77,3 +80,4 @@ class DataExtractor {
 }
 
 module.exports = DataExtractor;
+

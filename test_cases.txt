@@ -1,4 +1,4 @@
-const DataExtractor = require('./data-extractor');
+const DataExtractor = require('./extractor');
 
 // Sample text with various patterns to test
 const testString = `
@@ -39,6 +39,8 @@ $19.99
 $1,234.56
 `;
 
+console.log("Sample text initialized.");
+
 // Create an instance of DataExtractor
 const extractor = new DataExtractor(testString);
 
@@ -59,4 +61,6 @@ testExtraction('extractTime', 'Extracted Time Formats');
 testExtraction('extractHtmlTags', 'Extracted HTML Tags');
 testExtraction('extractHashtags', 'Extracted Hashtags');
 testExtraction('extractCurrency', 'Extracted Currency Amounts');
+
+console.log("Data extraction complete.");
 
